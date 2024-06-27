@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Internet of Things</title>
+    <script>
+        async function fetchDistance() {
+            // Mengambil data jarak dari endpoint '/distance' 
+            const response = await fetch('/distance');
+            // Mendapatkan response JSON dan menunggu sampai data tersedia 
+            const data = await response.json();
+            // Menampilkan data jarak pada elemen dengan id 'distance'
+            document.getElementById('distance').innerText = 657;
+        }
+
+        // Memanggil fetchDistance setiap 1 detik untuk mendapatkan data terbaru
+        setInterval(fetchDistance, 1000); // Update setiap 1 detik
+    </script>
+</head>
+<body>
+    <h1>Distance Measurement</h1><br>
+    <h4>Nama   : Rika Yulianto</h4>
+    <h4>NIM    : 1462100048</h4>
+    <h4>Matkul : Internet of Things</h4><br>
+    <p>Distance: <span id="distance">657</span> cm</p>
+</body>
+</html>
